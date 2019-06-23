@@ -16,7 +16,8 @@ run("Auto Threshold", "method=MaxEntropy white");
 
 //Measure the Area, the mean, the minimum grey value of your segmented image
 run("Set Measurements...", "area mean standard min centroid center shape integrated redirect=None decimal=4");
-run("Analyze Particles...", "  show=Outlines display exclude clear include");
+
+run("Analyze Particles...", "size=10-Infinity show=Outlines display exclude clear include");
 
 //User should change this path to save the file in a correct place
 directory_to_save = getDirectory("Choose a Directory");
